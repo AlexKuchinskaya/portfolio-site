@@ -1,0 +1,1 @@
+export const allNavSiteLinks = [`about`,`portfolio`, `contact`, `blog`];
