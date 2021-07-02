@@ -1,4 +1,4 @@
-export const allNavSiteLinks = [`about`,`portfolio`, `contact`, `blog`];
+export const allNavSiteLinks = [`about`,`projects`, `blog`, `contact`];
 
 export const footerSocialInfo = [
     {
