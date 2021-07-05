@@ -3,10 +3,10 @@ import React from 'react';
 const Contact = () => {
     return <>
         <section className="credit container">
-            <h2 className="visually-hidden">Contact</h2>
+            <h2 className="">Contact</h2>
             <div className="form-wrapper">
             <form>
-                <ul>
+                <ul className="list">
                     <li>
                         <label htmlFor="name"></label>
                         <input type="text" id="name" placeholder="Your name" required></input>

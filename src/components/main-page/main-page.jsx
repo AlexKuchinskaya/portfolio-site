@@ -11,10 +11,13 @@ const MainPage = () => {
             <section className="about">
                 <h2>About me</h2>
                 <div>
-                    <p></p>
+                    <p>XXXXXX</p>
                     <img></img>
                     <a download></a>
                 </div>
+            </section>
+            <section>
+                <div className="skils"></div>
             </section>
             <section className="credit container">
                 {/* <h2 className="visually-hidden">Кредиты</h2>
