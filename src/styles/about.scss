@@ -1,0 +1,104 @@
+.about {
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+.about__photo {
+    // border: 8px solid;
+    // border-width: 10px;
+    // border-image: repeating-linear-gradient(45deg, turquoise, pink 4%) 1;
+    position: relative;
+    // background: #fff;
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 20px;
+	// background-clip: padding-box;
+	// border: solid 8px transparent;
+    // border-radius: 0.8rem;
+    @media (min-width: $tablet-width) {
+        width: 380px;
+        height: 530px;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+        margin-bottom: 20px;
+        box-shadow: 0 10px 15px rgb(60 24 116 / 45%)
+    }
+
+	// &:before {
+	// 	content: "";
+	// 	position: absolute;
+	// 	top: 0;
+	// 	right: 0;
+	// 	bottom: 0;
+	// 	left: 0;
+	// 	z-index: -1;
+	// 	margin: -8px; /* same as border width */
+	// 	border-radius: inherit; /* inherit container box's radius */
+	// 	background: linear-gradient(to left, #3C1874, #932432);
+	// }
+}
+
+.about__title {
+    margin-bottom: 5%;
+}
+
+.about__text {
+    margin-bottom: 2.5rem;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    &--first, &--second, &--third {
+        text-indent: 25px;
+        position: relative;
+        &::after, &::before {
+            content: '<p>';
+            font-family: "Dancing Script", "Arial", cursive;
+            color: $dark-red;
+            top: -25px;
+            left: -25px;
+            font-size: 25px;
+            position: absolute;
+        }
+        &::before { 
+            content: '</p>';
+            bottom: 0;
+            top: auto;
+            left: auto;
+            right: 0;
+        }
+    }
+    &--hobby {
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+    &--link {
+        color: $basic-purple;
+        font-weight: 500;
+        &:hover, &:focus {
+            color: $dark-red;
+        }
+    }
+}
+
+.about__download {
+    box-sizing: border-box;
+    // border: 3px solid #f3f3f3;
+    color: #f3f3f3;
+    background-color: $basic-purple;
+    display: block;
+    max-width: 400px;
+    margin: 0 auto;
+    font-size: 20px;
+    // font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 30px;
+    @media screen and (min-width: $tablet-width) {
+        margin-top: 40px;
+    }
+
+    @media screen and (min-width: $desktop-width) {
+        margin-top: 50px;
+    }
+}

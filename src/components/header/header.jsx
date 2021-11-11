@@ -7,20 +7,18 @@ const Header = ({isLogoLinkInHeader}) => {
    
     return <>
         <header className="header">
-            <div className="container">
+            <NavigationSite />
+            {/* <div className="container">
                 <div className="header__wrapper">
-                    {/* Logo of my site */}
                     <Logo/>
                     <NavigationSite />
                     <div className="user-language"> 
-                    {/* переключатель языков */}
                         <a className="user-language__link" href="#">
-                            {/* some svg with language icon */}
                             <span className="user-language__option">ENG</span>
                         </a>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </header>
     </ >;
   };

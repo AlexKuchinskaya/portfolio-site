@@ -1,0 +1,16 @@
+.container-site {
+    box-sizing: content-box;
+    width: 290px;
+    padding: 0 15px;
+    margin: 0 auto;
+  
+    @media (min-width: $tablet-width) {
+      width: 678px;
+      padding: 0 45px;
+    }
+  
+    @media (min-width: $desktop-width) {
+      width: 1170px;
+      padding: 0;
+    }
+}

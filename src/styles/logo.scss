@@ -1,0 +1,14 @@
+.logo {
+    &:hover {
+        opacity: 1;
+    } 
+}
+.logo__name {
+    font-family: "Dancing Script";
+    font-size: 40px;
+    color: #3C1874;
+    height: 50px;
+    &:hover {
+        color: $dark-red;
+    } 
+}

@@ -1,0 +1,139 @@
+.menu {
+    position: relative;
+    // max-width: 968px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu__link {
+    color: $basic-purple;
+    text-transform: uppercase;
+    font-weight: $font-medium;
+}
+//change this sizes in bootstrap
+.menu__toggle {
+    display: none;
+}
+@media screen and (max-width: $mobile-width-only) {
+.menu__toggle {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 1.3rem;
+    bottom: .5rem;
+    z-index: 2;
+    display: block;
+    width: 24px;
+    height: 18px;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+}
+
+.menu--closed {
+    .menu__toggle::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 24px;
+        height: 3px;
+        background-color: $basic-purple;
+        box-shadow: 0 7px 0 0 $basic-purple, 0 14px 0 0 $basic-purple;
+    }
+    .menu__toggle:hover::before {
+        background-color: $dark-red;
+        box-shadow: 0 7px 0 0 $dark-red, 0 14px 0 0 $dark-red;
+    }
+}
+
+.menu--opened {
+    .menu__toggle {
+        width: 30px;
+        height: 30px;
+    }
+    .menu__toggle::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 30px;
+        height: 30px;
+        background-color: transparent;
+        background: url("../img/x.svg");
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        box-shadow: none;
+    }
+    .menu__toggle:hover::before {
+        background: url("../img/x-hover.svg");
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        box-shadow: none;
+    }
+}
+}
+@media screen and (max-width: $mobile-width-only) {
+    .menu__nav {
+        position: fixed;
+        bottom: -100%;
+        left: 0;
+        width: 100%;
+        background-color: $basic-white;
+        padding: 2rem 1.2rem 4rem;
+        box-shadow: 0 -1px 4px rgba(60, 24, 116, 0.1);
+        border-radius: 1.5rem 1.5rem 0 0;
+        transition: .3s;
+    }
+    .menu--opened {
+        .menu__nav {
+            bottom: 0;
+        }
+    }
+}
+.menu__list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    grid-column-gap: 0.7rem;
+    @media screen and (min-width: $tablet-width) {
+        display: flex;
+        flex-wrap: wrap;
+        min-width: 500px;
+        justify-content: space-between;
+    }
+    @media screen and (min-width: $desktop-width) {
+        min-width: 600px;
+    }
+}
+
+.menu__link  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    &:hover {
+        color: $dark-red;
+        opacity: 1;
+    }
+    &--active {
+        color: $bright-red;
+        opacity: 1;
+    }
+
+    @media screen and (min-width: $tablet-width) {
+        flex-direction: row;
+        font-size: 14px;
+    }
+
+    svg {
+        width: 20px;
+        height: 20px;
+        margin-bottom: 10px;
+        @media screen and (min-width: $tablet-width) {
+            margin-bottom: 0;
+            display: block;
+            margin-right: 10px;
+        }
+    }
+}

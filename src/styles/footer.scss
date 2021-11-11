@@ -1,0 +1,39 @@
+footer {
+    padding: 70px 0 50px 0;
+    position: relative;
+}
+
+.footer__year {
+    color: $dark-red;
+}
+
+.footer__wrapper {
+    width: 280px;
+    margin: 0 auto;
+}
+
+.footer__author {
+    margin-bottom: 0;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.footer__button-up {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $bright-red;
+    z-index: 10;
+    padding: 15px 5px;
+    border: transparent;
+    &:hover, &:focus  {
+        background-color: $dark-red;//solucionar on focus doesn't change the color on the initial color onclick
+    }
+}
+
+.footer__arrow {
+    width: 25px;
+    height: 25px;
+    fill: $basic-white
+}

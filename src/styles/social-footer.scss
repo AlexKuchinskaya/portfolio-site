@@ -1,0 +1,15 @@
+.social-footer svg {
+    fill: $basic-purple;
+    width: 26px;
+    height: 26px;
+    &:hover, &:focus {
+        fill: $dark-red;
+    }
+    &:active {
+        fill: $bright-red;
+    }
+}
+
+.social-footer {
+    margin-bottom: 35px;
+}

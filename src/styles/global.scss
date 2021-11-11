@@ -1,0 +1,40 @@
+html {
+  scroll-behavior: smooth;;
+}
+a {
+    text-decoration: none;
+
+    &:hover {
+        color: $basic-white;
+    }
+}
+  
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  font-family: $body-font;
+  font-weight: 400;
+  font-size: $normal-font-size;
+  line-height: 21.79px;
+  color: $basic-grey;
+  box-sizing: border-box;
+  background-color: #f3f3f3;
+  @media screen and (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 21px;
+  }
+  @media screen and (min-width: $desktop-width) {
+    font-size: 18px;
+    line-height: 23px;
+  }
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}

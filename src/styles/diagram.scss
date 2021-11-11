@@ -1,0 +1,229 @@
+.diagram__inner {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #283747;
+}
+$default-size: 1em;
+// .diagram {
+//     position: relative;
+//     font-size: 10em;
+// }
+// .diagram__pie {
+//     width: 100%;
+//     height: 100%;
+//     clip: rect(0, $default-size, $default-size, $default-size / 2);
+//     left: 0;
+//     position: absolute;
+//     top: 0;
+// }
+// .diagram__half-circle {
+//     width: 100%;
+//     height: 100%;
+//     border: ($default-size / 10) solid #3498db;
+//     border-radius: 50%;
+//     clip: rect(0, $default-size / 2, $default-size, 0);
+//     left: 0;
+//     position: absolute;
+//     top: 0;
+// }
+// .diagram__label {
+//     background: #283747;
+//     border-radius: 50%;
+//     width: 100px;
+//     height: 100px;
+//     // bottom: $label-font-size-redo / 10;
+//     color: $basic-white;
+//     cursor: default;
+//     display: block;
+//     // font-size: $label-font-size;
+//     // left: $label-font-size-redo / 10;
+//     // line-height: $label-font-size-redo * .70;
+//     // position: absolute;
+//     // right: $label-font-size-redo / 10;
+//     text-align: center;
+//     // top: $label-font-size-redo / 10;
+// }
+// -- mixins
+@mixin size($width, $height) {
+    height: $height;
+    width: $width;
+}
+@mixin draw-progress($progress, $color) {
+    .diagram__pie {
+      .diagram__half-circle {
+        border-color: $color;
+      }
+  
+      .diagram__left-side {
+        transform: rotate($progress * 3.6deg);
+      }
+  
+      @if $progress <= 50 {
+        .diagram__right-side {
+          display: none;
+        }
+      } @else {
+        clip: rect(auto, auto, auto, auto);
+  
+        .diagram__right-side {
+          transform: rotate(180deg);
+        }
+      }
+    }
+}
+
+
+// -- vars
+$bg-color: #34495e;
+$default-size: 1em;
+$label-font-size: $default-size / 4;
+$label-font-size-redo: $default-size * 4;
+
+
+.diagram{
+  font-size: 10em;
+  position: relative;
+}
+
+// .charts-container {
+//   &:after {
+//     clear: both;
+//     content: '';
+//     display: table;
+//   }
+// }
+
+.diagram__wrapper {
+  @include size($default-size, $default-size);
+  margin: 15px;
+  position: relative;
+}
+.diagram__label {
+    background: $bg-color;
+    border-radius: 50%;
+    bottom: $label-font-size-redo / 10;
+    color: #ecf0f1;
+    cursor: default;
+    display: block;
+    width: 140px;
+    height: 140px;
+    // font-size: $label-font-size;
+    // line-height: $label-font-size-redo * .70;
+    position: absolute;
+    text-align: center;
+    left: 20px;
+    top: 7px;
+    z-index: 1;
+
+}
+  .diagram__pie {
+    @include size(100%, 100%);
+    clip: rect(0, $default-size, $default-size, $default-size / 2);
+    left: 0;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+  }
+    .diagram__half-circle {
+      @include size(100%, 100%);
+      border: ($default-size / 10) solid #3498db;
+      border-radius: 50%;
+      clip: rect(0, $default-size / 2, $default-size, 0);
+      left: 0;
+      position: absolute;
+      top: 0;
+    }
+
+
+.diagram__wrapper--90 {
+    @include draw-progress(90, #e67e22);
+}
+
+.diagram__wrapper--50 {
+    @include draw-progress(50, red);
+}
+
+.card-new {
+    position: relative;
+    width: 250px;
+    // background: linear-gradient(0deg, #1b1b1b, #222, #1b1b1b);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  text-align: center;
+  overflow: hidden;
+  transition: 0.5s;
+//   background-color: transparent;
+}
+.percent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: #283747;
+    z-index: 9;
+  }
+
+.circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    z-index: 1000;
+  }
+
+.circle circle {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    
+    stroke: transparent;
+    stroke-width: 10;
+    stroke-linecap: round;
+    transform: translate(5px, 5px);
+  }
+  .circle circle:nth-child(2) {
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+    stroke-dashoffset: calc(440 - (440 * 90) / 100);
+    stroke: red;
+  }
+
+.circle {
+    z-index: 10;
+    &--2 {
+        width: 170px;
+        height: 170px;
+        z-index: 2;
+        circle {
+            transform: translate(15px, 15px);
+        }
+        circle:nth-child(2) {
+            stroke-dasharray: 440;
+            stroke-dashoffset: 440;
+            stroke-dashoffset: calc(440 - (440 * 90) / 100);
+            stroke: blue;
+          }
+    }
+    &--3 {
+        width: 190px;
+        height: 190px;
+        z-index: 1;
+        circle {
+            transform: translate(25px, 25px);
+        }
+        circle:nth-child(2) {
+            stroke-dasharray: 440;
+            stroke-dashoffset: 440;
+            stroke-dashoffset: calc(440 - (440 * 90) / 100);
+            stroke: $basic-purple;
+          }
+    }
+}
