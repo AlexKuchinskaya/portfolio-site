@@ -1,6 +1,9 @@
-footer {
+.footer {
     padding: 70px 0 50px 0;
     position: relative;
+    &--rest-pages {
+        background-color: $basic-purple;
+    }
 }
 
 .footer__year {
@@ -16,6 +19,9 @@ footer {
     margin-bottom: 0;
     font-size: 1rem;
     text-align: center;
+    &--rest-pages {
+        color: $basic-white;
+    }
 }
 
 .footer__button-up {

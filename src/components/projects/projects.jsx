@@ -1,10 +1,13 @@
-import React from 'react';
-import { socialInfo, Social } from '../const/const';
+import React, {useState} from 'react';
+import {Link} from 'react-router-dom';
+import { socialInfo, Social, projectsInfo } from '../const/const';
 import { ReactComponent as LinkedIn } from '../../img/linkedin.svg';
 import { ReactComponent as Facebook } from '../../img/facebook.svg';
 import { ReactComponent as Instagram } from '../../img/instagram.svg';
 import { ReactComponent as GitHub } from '../../img/github.svg';
+import ProjectCard from './project-card';
 const Projects = () => {
+  const [activeProjectCardId, setActiveProjectCardId] = useState(1);
     const returnSvg = (link) => {
       switch (link) {
         case Social.LINKEDIN:
@@ -19,7 +22,9 @@ const Projects = () => {
           return ``;
       }
     }
-
+    const handleProjectCardSelect = (selectedCardId) => {
+      setActiveProjectCardId(selectedCardId)
+    }
     return <>
         <section className="projects" id="projects">
             <div className="skills__title-container projects__title-container">
@@ -37,15 +42,15 @@ const Projects = () => {
                 })}
               </div> */}
               <div class="projects__list">
-                  <article className="projects__card">
-                      <div className="projects__image">
-                          <img src="../../img/project-cat-energy.jpg" alt="Fantastic Beasts: The Crimes of Grindelwald" width="280" height="175" />
-                      </div>
-                      <div className="projects__information"> 
-                          <h3 class="projects__name">Cat Energy</h3>
-                          <a class="btn projects__link-info" href="!#">Learn more</a>
-                      </div>
-                  </article>
+                  {projectsInfo.map((project) => {
+                    return <ProjectCard 
+                      key={project.id}
+                      project={project}
+                      activeProjectCardId={activeProjectCardId}
+                      onProjectCardSelect={handleProjectCardSelect}
+                      isSelected={project.id === activeProjectCardId}
+                    />
+                  })}
                   {/* <article className="projects__card">
                       <div className="projects__image">
                           <img src="../../img/project-cat-energy.jpg" alt="Fantastic Beasts: The Crimes of Grindelwald" width="280" height="175" />

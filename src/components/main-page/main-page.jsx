@@ -85,7 +85,7 @@ const MainPage = () => {
         // console.log(`all svg`, sceneEl.current.querySelectorAll(`.banners__icon`))
     }
     return <>
-        <NavigationSite elementsArray={createRefSectiosArray}/>
+        <NavigationSite isMainPage={true} elementsArray={createRefSectiosArray}/>
         <main className="main">
             <h1 className="visually-hidden">Portfolio site of Alexandra Kuchynskaya</h1>
             {/* <section className="banner">
@@ -130,7 +130,7 @@ const MainPage = () => {
             <Projects />
             <Contact/>
         </main>
-        <Footer />
+        <Footer isMainPageFooter={true}/>
     </>
 }
 

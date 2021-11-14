@@ -1,4 +1,4 @@
-import PersonSvg from "../../img/people.svg"
+export const PROJECT_PATH = `projects`;
 export const allNavSiteLinks = [
   {
     linkName:`about me`,
@@ -167,4 +167,31 @@ export const advantagesServices = [
       description: `A website code optimization is what I pay attention to improve a website’s ability to drive business goals`,
       id: 4,
     },
+]
+
+export const projectsInfo = [
+  {
+    id: 1,
+    name: `Cat Energy`,
+    description: `blabla`, 
+    technology: `HTML / CSS, Gulp, Sass, Git, Adaptive Layout, Retinized graphics, Website optimization.`,
+    cardPicture: `../../img/project-cat-energy.jpg`,
+    images: [`../../img/cat-energy-index-desktop.png`, `../../img/cat-energy-index-tablet.png`, `../../img/cat-energy-index-mobile.png`],
+  },
+  {
+    id: 2,
+    name: `Sedona`,
+    description: `heyehehe`, 
+    technology: `HTML / CSS, Gulp, Sass, Git, Adaptive Layout, Retinized graphics, Website optimization.`,
+    cardPicture: `../../img/project-cat-energy.jpg`,
+    images: [`../../img/cat-energy-index-desktop.png`, `../../img/cat-energy-index-tablet.png`, `../../img/cat-energy-index-mobile.png`],
+  },
+  {
+    id: 3,
+    name: `Arcadia Redux`,
+    description: `heyehehe`, 
+    technology: `HTML / CSS, Gulp, Sass, Git, Adaptive Layout, Retinized graphics, Website optimization.`,
+    cardPicture: `../../img/project-cat-energy.jpg`,
+    images: [`../../img/cat-energy-index-desktop.png`, `../../img/cat-energy-index-tablet.png`, `../../img/cat-energy-index-mobile.png`],
+  },
 ]

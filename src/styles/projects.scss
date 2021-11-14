@@ -26,11 +26,27 @@
         bottom: -25px;
     }
 }
+
+.projects__list {
+    @media screen and (min-width: $tablet-width) {
+        display: flex;
+        flex-wrap: wrap;
+        // grid-template-columns: repeat(2, 1fr);
+        // column-gap: 30px;
+        justify-content: space-between;
+    }
+}
 .projects__card {
     position: relative;
     width: 280px;
     overflow: hidden;
     box-shadow: 0 0 10px 1px rgb(0 0 0 / 50%);
+    flex: 0 280px;
+    @media screen and (min-width: $desktop-width) {
+        flex: 0 0 280px;
+    
+    }
+    
 }
 // .projects__information {
 //     display: none;

@@ -1,0 +1,78 @@
+.project-card {
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+.project-card__name {
+    margin-bottom: 30px;
+}
+.project-card__wrapper {
+    @media (min-width: $tablet-width) {
+        display: flex;
+        justify-content: space-between;    
+    }
+}
+.project-card__item {
+    margin-bottom: 40px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+}
+.project-card__link {
+    display: block;
+    max-width: 100%;
+    max-height: 400px;
+    margin: 10px;
+    overflow: hidden;
+    // box-shadow: 0 0 10px 1px rgb(0 0 0 / 90%);
+    box-shadow: 0 0 10px 1px rgb(0 0 0 / 50%);
+}
+
+.project-card__title {
+    margin: 0;
+    margin-bottom: 15px;
+    // border-bottom:1px solid $bright-red;
+    // padding-bottom: 2px;
+    text-decoration: underline;
+    text-decoration-color: $bright-red;
+    text-underline-offset: 5px;
+    font-family: "Poppins", "Arial", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    // position: relative;
+    // &::before, &::after {
+    //     content: "<h>";
+    //     font-family: "Dancing Script", "Arial", cursive;
+    //     color: #932432;
+    //     top: -25px;
+    //     left: -25px;
+    //     font-size: 25px;
+    //     position: absolute;
+    // }
+    // &::after {
+    //     content: "</h>";
+    //     bottom: 0;
+    //     top: auto;
+    //     left: auto;
+    //     right: 0;
+    // }
+}
+
+.project-card__text {
+    margin: 0;
+}
+
+.project-card__slider {
+    max-width: 50%;
+}
+
+.project-card__home {
+    background-color: $basic-purple;
+    box-sizing: border-box;
+    color: #f3f3f3;
+    display: block;
+    max-width: 200px;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-top: 30px;
+}

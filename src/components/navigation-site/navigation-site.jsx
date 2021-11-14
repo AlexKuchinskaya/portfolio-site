@@ -10,7 +10,7 @@ import { ReactComponent as Contacts } from '../../img/envelope.svg';
 import { ReactComponent as Close } from '../../img/x.svg';
 
 
-const NavigationSite = () => {
+const NavigationSite = ({isMainPage}) => {
     // console.log(`sectionsBlocks`, sectionsBlocks)
     const defaultActiveLink = ``;
     const [isMenuOpened, setIsMenuOpened]= useState(false)
@@ -59,7 +59,7 @@ const NavigationSite = () => {
     return <>
         <header className="header">
             <nav className={`header__nav menu ${isMenuOpened ? `menu--opened` : `menu--closed`} container-site`}>
-                <Logo />
+                <Logo isMainPage={isMainPage}/>
                 <div className="menu__nav">
                     <ul className="list grid menu__list">
                         {allNavSiteLinks.map((siteLink) => {
