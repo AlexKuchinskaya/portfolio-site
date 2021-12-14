@@ -1,0 +1,34 @@
+.social-footer svg {
+    fill: $basic-purple;
+    width: 26px;
+    height: 26px;
+    &:hover, &:focus {
+        fill: $dark-red;
+    }
+    &:active {
+        fill: $bright-red;
+    }
+}
+
+.social-footer--rest-pages svg {
+    fill: $basic-white;
+}
+
+.social-footer {
+    margin-bottom: 35px;
+}
+
+.social-footer__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    // width: 100%;
+    // margin: 0 auto;
+}
+
+.social-footer__item {
+    // margin-right: 20px;
+    // &:last-child {
+    //     margin-right: 0;
+    // }
+}
