@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 import React, { Component } from "react";
 import { projectsInfo } from "../const/const";
 
-const ProjectstSlider = () => {
+const ProjectstSlider = ({images}) => {
   console.log(` {projectsInfo.images`,  projectsInfo)
     const settings = {
       dots: true,
@@ -16,7 +16,7 @@ const ProjectstSlider = () => {
     return (
       <div className="project-card__slider">
         <Slider {...settings}>
-          {projectsInfo[0].images.map((slide) => {
+          {images.map((slide) => {
             return <div key={slide} className="project-card__image-container">
               <a href={slide} className="project-card__link">
                 <img src={slide} alt="" width="555" height="400"></img>

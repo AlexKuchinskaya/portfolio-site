@@ -1,13 +1,16 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import {Link} from 'react-router-dom';
-import { socialInfo, Social, projectsInfo } from '../const/const';
+import { socialInfo, Social} from '../const/const';
 import { ReactComponent as LinkedIn } from '../../img/linkedin.svg';
 import { ReactComponent as Facebook } from '../../img/facebook.svg';
 import { ReactComponent as Instagram } from '../../img/instagram.svg';
 import { ReactComponent as GitHub } from '../../img/github.svg';
 import ProjectCard from './project-card';
+import Context from '../context/context';
 const Projects = () => {
+  const [context, setContext] = useContext(Context);
   const [activeProjectCardId, setActiveProjectCardId] = useState(1);
+  console.log(`context.projectsInfo`, context.projectsInfo)
     const returnSvg = (link) => {
       switch (link) {
         case Social.LINKEDIN:
@@ -24,6 +27,10 @@ const Projects = () => {
     }
     const handleProjectCardSelect = (selectedCardId) => {
       setActiveProjectCardId(selectedCardId)
+      setContext({
+        ...context,
+        activeCard: selectedCardId,
+      })
     }
     return <>
         <section className="projects" id="projects">
@@ -42,7 +49,7 @@ const Projects = () => {
                 })}
               </div> */}
               <div class="projects__list">
-                  {projectsInfo.map((project) => {
+                  {context.projectsInfo.map((project) => {
                     return <ProjectCard 
                       key={project.id}
                       project={project}
