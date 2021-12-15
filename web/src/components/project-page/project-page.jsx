@@ -21,7 +21,7 @@ const ProjectPage = () => {
                         </li>
                         <li className="project-card__item">
                             <h3 className="project-card__title">Webpage</h3>
-                            <a></a>
+                            <a className="project-card__text">www</a>
                         </li>
                         <li  className="project-card__item">
                             <h3 className="project-card__title">Description</h3>
