@@ -113,7 +113,7 @@ const Contact = () => {
                                 className={`form-control contact-form__input ${isUserError ? `contact-form__input--error` : ``}`} 
                                 name="user"
                                 id="name" 
-                                autoFocus={true}
+                                // autoFocus={true}
                                 value={currentFormState.user}
                                 onChange={handleInputChange}
                                 onBlur={checkUserInputContent}

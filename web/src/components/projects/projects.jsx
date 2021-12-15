@@ -51,15 +51,6 @@ const Projects = () => {
                       isSelected={project.id === activeProjectCardId}
                     />
                   })}
-                  {/* <article className="projects__card">
-                      <div className="projects__image">
-                          <img src="../../img/project-cat-energy.jpg" alt="Fantastic Beasts: The Crimes of Grindelwald" width="280" height="175" />
-                      </div>
-                      <div className="projects__information"> 
-                          <h3 class="projects__name">Cat Energy</h3>
-                          <a class="btn projects__link-info" href="!#">Learn more</a>
-                      </div>
-                  </article> */}
               </div>
             </div>
         </section>
