@@ -5,7 +5,7 @@ import React, { Component } from "react";
 import { projectsInfo } from "../const/const";
 
 const ProjectstSlider = ({images}) => {
-  console.log(` {projectsInfo.images`,  projectsInfo)
+  console.log(` {projectsInfo.images`,  images)
     const settings = {
       dots: true,
       infinite: true,

@@ -10,7 +10,7 @@ import Context from '../context/context';
 const Projects = () => {
   const [context, setContext] = useContext(Context);
   const [activeProjectCardId, setActiveProjectCardId] = useState(1);
-  console.log(`context.projectsInfo`, context.projectsInfo)
+  console.log(`context.activeCard`, context.activeCard)
     const returnSvg = (link) => {
       switch (link) {
         case Social.LINKEDIN:
@@ -26,7 +26,7 @@ const Projects = () => {
       }
     }
     const handleProjectCardSelect = (selectedCardId) => {
-      setActiveProjectCardId(selectedCardId)
+      // setActiveProjectCardId(selectedCardId)
       setContext({
         ...context,
         activeCard: selectedCardId,
@@ -53,9 +53,9 @@ const Projects = () => {
                     return <ProjectCard 
                       key={project.id}
                       project={project}
-                      activeProjectCardId={activeProjectCardId}
+                      activeProjectCardId={context.activeCard}
                       onProjectCardSelect={handleProjectCardSelect}
-                      isSelected={project.id === activeProjectCardId}
+                      isSelected={project.id === context.activeCard}
                     />
                   })}
               </div>

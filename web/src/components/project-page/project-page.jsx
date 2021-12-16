@@ -10,8 +10,9 @@ import Context from '../context/context';
 const ProjectPage = () => {
     const [context, setContext] = useContext(Context)
     console.log(`activeProjectCardId`, context.activeCard)
-    const selectedProject = [...context.projectsInfo].filter((project) => project.id === context.activeCard)
-    console.log(`selectedProject`, selectedProject)
+    const selectedProject = [...context.projectsInfo].filter((project) => project.id === context.activeCard)[0]
+    console.log(`selectedProject`, selectedProject.name)
+    console.log(`selectedProject images`, selectedProject.images)
     return <>
         <NavigationSite isMainPage={false}/>
         <main className="main">
@@ -26,14 +27,14 @@ const ProjectPage = () => {
                         </li>
                         <li className="project-card__item">
                             <h3 className="project-card__title">Webpage</h3>
-                            <a className="project-card__text">{selectedProject.website}</a>
+                            <a href={selectedProject.website} className="project-card__text project-card__text--website">{selectedProject.website}</a>
                         </li>
                         <li  className="project-card__item">
                             <h3 className="project-card__title">Description</h3>
                             <p className="project-card__text">{selectedProject.description}</p>
                         </li>
                     </ul>
-                    {/* <ProjectstSlider images={selectedProject.images}/> */}
+                    <ProjectstSlider images={selectedProject.images}/>
                 </div>
                 <Link className="button button--purple project-card__home" to="/">To home page</Link>
             </section>

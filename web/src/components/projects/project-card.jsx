@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import { PROJECT_PATH } from '../const/const';
 
 const ProjectCard = ({project, activeProjectCardId, onProjectCardSelect, isSelected}) => {
-    console.log(`project`, project)
     const handleOnMouseEnter = () => {
+        console.log(`project.id mouse enter`, project.id)
         onProjectCardSelect(project.id)
     }
     return <>

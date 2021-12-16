@@ -173,11 +173,11 @@ export const projectsInfo = [
   {
     id: 1,
     name: `Cat Energy`,
-    description: `blabla`, 
+    description: `Cat Energy is an online store (e-commerce website) that helps you to choose and order a suitable feeding system for your cat. The design looks simple and milimanistic, but at the same time it is not as easy as it might seem at first glance, as you need to create an uncluttered informative interface. The site consists of the following pages: home page, product catalog and program selection form. There are mobile, tablet and desktop versions, styled with flexboxes and grids. Good practices in terms of accessibility, SEO, performance are also applied. Cat Energy is my gradution project of the course "HTML && CSS. Adaptive Website Coding and Automatation". `, 
     website: `https://avto-moto-kuchinskaya.vercel.app/`,
-    technology: `HTML / CSS, Gulp, Sass, Git, Adaptive Layout, Retinized graphics, Website optimization.`,
+    technology: `HTML / CSS, Gulp, Less, Git, Adaptive Layout, Retinized graphics, Website optimization.`,
     cardPicture: `../../img/project-cat-energy.jpg`,
-    images: [`../../img/cat-energy-index-desktop.png`, `../../img/cat-energy-index-tablet.png`, `../../img/cat-energy-index-mobile.png`],
+    images: [`../../img/cat-energy-index-desktop.png`, `../../img/cat-energy-index-tablet.png`, `../../img/cat-energy-index-mobile.png`, `../../img/adaptive.png`],
   },
   {
     id: 2,
@@ -186,7 +186,7 @@ export const projectsInfo = [
     website: `https://alexkuchinskaya.github.io/cat-energy/`,
     technology: `HTML / CSS, Gulp, Sass, Git, Adaptive Layout, Retinized graphics, Website optimization.`,
     cardPicture: `../../img/projects-sedona.jpg`,
-    images: [`../../img/sedona.jpg`, `../../img/sedona-hotels.jpg`],
+    images: [`../../img/sedona.jpg`, `../../img/sedona-hotels.jpg`, `../../img/first-level.jpg`],
   },
   {
     id: 3,
@@ -195,7 +195,7 @@ export const projectsInfo = [
     website: `https://avto-moto-kuchinskaya.vercel.app/`,
     technology: `HTML / CSS, Gulp, Sass, Git, Adaptive Layout, Retinized graphics, Website optimization.`,
     cardPicture: `../../img/project-arcadia-redux.jpg`,
-    images: [`../../img/arcadia-redux-desktop.jpg`, `../../img/cat-energy-index-tablet.png`, `../../img/arcadia-redux-mobile.jpg`],
+    images: [`../../img/arcadia-redux-desktop.jpg`, `../../img/arcadia-redux-mobile.jpg`],
   },
   {
     id: 4,
