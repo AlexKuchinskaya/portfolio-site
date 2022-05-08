@@ -20,9 +20,9 @@ const Services = () => {
             return ``;
         }
       }
-    return <section className="services container-site" id="interface">
+    return <section className="services" id="interface">
         <h2 className="title services__title">The interface i guarantee</h2>
-        <div className="services__list">
+        <div className="services__list container-site">
               {advantagesServices.map((advantage) => {
                 return <div key={advantage.name} className="services__item">
                     <h3 className="services__name">{advantage.name}</h3>
