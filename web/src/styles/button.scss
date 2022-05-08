@@ -8,7 +8,7 @@
     padding-bottom: 11px;
     text-decoration: none;
     cursor: pointer;
-    &:hover, &:focus {
+    &:hover {
         box-shadow: inset 20em 0 0 0 $bright-red;
         border-color: $bright-red;
     }

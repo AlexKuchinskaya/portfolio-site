@@ -82,6 +82,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
     border-radius: 20px;
     padding: 15px 10px;
@@ -89,6 +90,7 @@
     position: relative;
     z-index: 4;
     margin-bottom: 50px;
+    box-sizing: border-box;
     &:last-child {
         margin-bottom: 0;
     }
@@ -206,9 +208,9 @@
         width: 172px;
     }
 
-    .infographics__image, .infographics__level-container {
-        padding-top: 30%;
-    }
+    // .infographics__image, .infographics__level-container {
+    //     padding-top: 30%;
+    // }
 }
 
 .infographics__skill {

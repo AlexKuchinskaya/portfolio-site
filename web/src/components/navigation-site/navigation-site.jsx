@@ -7,11 +7,9 @@ import { ReactComponent as Skills } from '../../img/pencil-square.svg';
 import { ReactComponent as Interface } from '../../img/laptop.svg';
 import { ReactComponent as Projects } from '../../img/image.svg';
 import { ReactComponent as Contacts } from '../../img/envelope.svg';
-import { ReactComponent as Close } from '../../img/x.svg';
 
 
 const NavigationSite = ({isMainPage}) => {
-    // console.log(`sectionsBlocks`, sectionsBlocks)
     const defaultActiveLink = ``;
     const [isMenuOpened, setIsMenuOpened]= useState(false)
     const [activeLink, setActiveLink] = useState(defaultActiveLink);
@@ -44,7 +42,7 @@ const NavigationSite = ({isMainPage}) => {
     }
     //in main.jsx собрать все рефы в массив и предать сюда, функция фитьотрации совпадение ссылки на элемент
     const scrollToBlock = (block) => {
-        window.scrollTo(0, block.offsetTop) 
+        window.scrollTo(0, block.offsetTop)
     }
     const handleActiveLinkOnClick = (evt) => {
         setActiveLink(evt.target.dataset.link);

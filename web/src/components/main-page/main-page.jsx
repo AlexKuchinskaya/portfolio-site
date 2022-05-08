@@ -1,4 +1,4 @@
-import React, {useRef, useEffect, useState} from 'react';
+import React, {useRef} from 'react';
 import Contact from '../contacts/contact';
 import Footer from '../footer/footer';
 import NavigationSite from '../navigation-site/navigation-site';
@@ -6,22 +6,16 @@ import About from '../about/about';
 import Skills from '../skills/skills';
 import Projects from '../projects/projects';
 import Services from '../services/services';
-// import { CircularProgressbar } from 'react-circular-progressbar';
-
-
-// import 'react-circular-progressbar/dist/styles.css';
 
 const MainPage = () => {
-    const [count, setCount] = useState(0);
-    
+
     const sceneEl = useRef(null);
-    const diagramEl = useRef(null);
     const aboutRef = useRef(null);
     const skillsRef = useRef(null);
     const servicesRef = useRef(null);
     const projectsRef = useRef(null);
     const contactRef = useRef(null);
-    
+
     const createRefSectiosArray = () => {
         return new Array([aboutRef, skillsRef, servicesRef, projectsRef,contactRef])
     }
@@ -31,40 +25,13 @@ const MainPage = () => {
     //       relativeInput: true,
     //       hoverOnly: true
     //     })
-    
+
     //     parallaxInstance.enable();
-    
+
     //     return () => parallaxInstance.disable();
     //   }, [])
-    const createCounter = () => {
-        // let count = 0;
-        const setFrame = () => {
-            setCount(count + 1);
-            console.log(`count`, count)
-            if (count === 101) {
-                clearInterval(runCounter)
-            } else {
-                return null
-            }
 
-        }
-        const runCounter = setInterval(setFrame, 50);
 
-    }
-    
-
-    useEffect(() => {
-        // setInterval(createSquare, 150)
-        // createCounter();
-        // createCounter();
-        // return () => clearTimeout(createCounter);
-        // const timer = setTimeout(() => {
-        //     setCount(count + 1)
-        //     console.log(`count`, count)
-        //   }, 1000);
-        //   return () => clearTimeout(timer);
-      }, [])
-    
     const handleMouseMove = (evt) => {
         sceneEl.current.querySelectorAll(`.banners__icon`).forEach((picture) => {
             const speed = picture.getAttribute(`data-speed`);

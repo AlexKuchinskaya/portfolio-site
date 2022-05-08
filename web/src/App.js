@@ -30,10 +30,6 @@ function App() {
           <ProjectPage />
         </Route>
       </Switch>
-      {/* <Routes>
-        <Route exact path="/" element={<MainPage />}></Route>
-        <Route exact path={`/${PROJECT_PATH}/:id`} element={<ProjectPage />} /></Route>
-      </Routes> */}
     </Context.Provider>
     </div>
     </BrowserRouter>

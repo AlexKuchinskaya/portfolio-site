@@ -1,8 +1,6 @@
 import React from 'react';
 import { advantagesServices, Advantages } from '../const/const';
-import { ReactComponent as DiamonPicture } from '../../img/diamond.svg';
 import { ReactComponent as FastIcon } from '../../img/rocket.svg';
-import { ReactComponent as Laptop } from '../../img/laptop.svg';
 import { ReactComponent as Mobile } from '../../img/smartphone.svg';
 import { ReactComponent as Optimimization } from '../../img/trending-up.svg';
 import { ReactComponent as User } from '../../img/accessibility-human.svg';
@@ -28,7 +26,7 @@ const Services = () => {
               {advantagesServices.map((advantage) => {
                 return <div key={advantage.name} className="services__item">
                     <h3 className="services__name">{advantage.name}</h3>
-                    
+
                     <div className="services__diamond">
                         {/* <DiamonPicture /> */}
                         <div className="services__diamond-container">
